@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OtherComponent } from './other/other.component';
 import { XyzPipe } from './xyz.pipe';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [AppComponent, OtherComponent, XyzPipe],
+  declarations: [AppComponent, OtherComponent, XyzPipe, UserComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
