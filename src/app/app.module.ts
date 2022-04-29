@@ -9,9 +9,10 @@ import { XyzPipe } from './xyz.pipe';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { AssessmentComponent } from './assessment/assessment.component';
 
 @NgModule({
-  declarations: [AppComponent, OtherComponent, XyzPipe, UserComponent, LoginComponent],
+  declarations: [AppComponent, OtherComponent, XyzPipe, UserComponent, LoginComponent, AssessmentComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

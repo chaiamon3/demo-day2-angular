@@ -1,3 +1,4 @@
+import { AssessmentComponent } from './assessment/assessment.component';
 import { LoginComponent } from './login/login.component';
 import { AuthenGuard } from './authen.guard';
 import { UserComponent } from './user/user.component';
@@ -7,7 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: 'user', component: UserComponent, canActivate: [AuthenGuard] },
   { path: 'other', redirectTo: '/user' },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'assessment', component: AssessmentComponent }
 ];
 
 @NgModule({

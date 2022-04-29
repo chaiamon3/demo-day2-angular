@@ -1,0 +1,5 @@
+<p>assessment works!</p>
+
+<button (click)="likeCounter()" [ngClass]="isLike ? 'liked' : ''">Like | {{countLike}}</button>
+<button style="margin-left: 5px;" (click)="dislikeCounter()" [ngClass]="isDislike ? 'disliked' : ''">Dislike |
+  {{countDislike}}</button>
