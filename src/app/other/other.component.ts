@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-other',
@@ -7,7 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OtherComponent implements OnInit {
 
-  @Input() name = {};
+  @Input() name: any;
+
+  @Output() changedNameEvent = new EventEmitter<any>();
+
+  doSomeChange() {
+    console.log("Click on doSomeChange !!");
+    this.name.age = 30;
+    this.changedNameEvent.emit(this.name);
+  }
 
   constructor() { }
 
