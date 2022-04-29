@@ -1,4 +1,7 @@
+import { User } from './../models/user';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 const URL = 'https://jsonplaceholder.typicode.com';
 
@@ -7,10 +10,11 @@ const URL = 'https://jsonplaceholder.typicode.com';
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getAllUsers() {
+  getAllUsers(): Observable<User[]> {
     console.log('Call getAllUsers()');
+    return this.http.get<User[]>(URL + "/users");
   }
 
 }
