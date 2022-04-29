@@ -1,0 +1,19 @@
+<h2>Hello Angular 13</h2>
+<h3>Project: {{ title }}</h3>
+
+Name: <input type="text" [value]="name" #myname (input)="doSth(myname.value)" />
+<br />
+Name2: <input type="text" #myname2 (input)="doSth(myname2.value)" />
+<br />
+Name3 (2-ways binding):
+<input type="text" [(ngModel)]="name" />
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+
+<p *ngIf="!name">Please enter your name</p>
+<p *ngIf="name">Hi, {{ name | uppercase}}</p>
+
+<p *ngIf="name; else showDefaultMessage">Hi, {{ name | uppercase}}</p>
+<ng-template #showDefaultMessage>Please enter your name</ng-template>
+
+<h3>Use NgFor</h3>
+<div *ngFor="let d of datas">{{d.id}} => {{d.name}}</div>
