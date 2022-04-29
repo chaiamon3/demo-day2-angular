@@ -6,9 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OtherComponent } from './other/other.component';
+import { XyzPipe } from './xyz.pipe';
 
 @NgModule({
-  declarations: [AppComponent, OtherComponent],
+  declarations: [AppComponent, OtherComponent, XyzPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
